@@ -6,6 +6,8 @@ $(document).on('ready', function () {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4500,
         responsive: [
             {
                 breakpoint: 768,
@@ -18,7 +20,46 @@ $(document).on('ready', function () {
     });
 });
 
+/*  Horloge */
+function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor((t / 1000) % 60);
+    var minutes = Math.floor((t / 1000 / 60) % 60);
+    var hours = Math.floor(t / (1000 * 60 * 60));
+    return {
+      'total': t,
+      'hours': hours,
+      'minutes': minutes,
+      'seconds': seconds
+    };
+  }
+  
+  function initializeClock(id, endtime) {
+    var clock = document.getElementById(id);
+    var hoursSpan = clock.querySelector('.hours');
+    var minutesSpan = clock.querySelector('.minutes');
+    var secondsSpan = clock.querySelector('.seconds');
+  
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
+  
+      
+      hoursSpan.innerHTML = t.hours;
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+  
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
+    }
+  
+    updateClock();
+    var timeinterval = setInterval(updateClock, 1000);
+  }
+  
+  var deadline = new Date(Date.parse(new Date()) + 25 * 60 * 60 * 1000);
 
+  initializeClock('clockdiv', deadline);
 
 /*
 

@@ -14,8 +14,20 @@
     height: 150px;
 }
 
+.height-100{
+    height: 100px;
+}
+
 .height-400{
     height: 400px;
+}
+
+.height-500{
+    height: 500px;
+}
+
+.height-2000{
+    height: 2000px;
 }
 
 .img_slider{
@@ -33,18 +45,12 @@
     height: 50px; 
 }
 
-.height-500{
-    height: 500px;
-}
-
-.height-2000{
-    height: 2000px;
-}
-
 .overflow-hidden{
     overflow: hidden;
 }
 
-
+.sticky_position{
+    position: sticky;
+}
   
 
