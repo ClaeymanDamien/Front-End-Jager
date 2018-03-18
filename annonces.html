@@ -18,7 +18,7 @@
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
             <img class="img-fluid height-50" src="images/logo.png" alt="Logo Jäguer">
         </a>
         <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -91,18 +91,18 @@
 
     </section>
     <!-- Annonce -->
-    <div class="container-fluid col-12 height-2000">
+    <div class="container-fluid col-12" id="annonce">
         <!--Fixed right -->
-        <div class="container sticky-top col-4 pt-5 mr-lg-3 p-2 mb-5 float-right">
+        <div class="d-none d-lg-block container sticky-top col-4 pt-5 mr-lg-3 p-2 float-right">
             <div class="border p-3">
-                <div class="col-12 border border-top-0 border-right-0 border-left-0">
-                    <span class="display-4">341€</span>
+                <div class="col-12 border p-0 pb-3 border-top-0 border-right-0 border-left-0">
+                    <span class="display-4">30 - 40%</span>
                 </div>
-                <div class="col-12 p-0 border border-top-0 border-right-0 border-left-0 height-150">
+                <div class="col-12 p-0 pb-4 border border-top-0 border-right-0 border-left-0">
                     <h4 class="mt-3">Elle va bientôt s'enfuir: </h4>
                     <div class="container-fluid d-flex align-items-center" id="clockdiv">
                         <div class="row display-4">
-        
+
                             <span class="hours"></span>
                             <span>&nbsp;:&nbsp;</span>
                             <span class="minutes"></span>
@@ -111,15 +111,44 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 pt-3 p-0 height-100 d-flex justify-content-center align-items-center">
-                    <button type="button" class="btn btn-danger w-100">
+                <div class="col-12 pt-3 p-0 d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-danger btn-lg w-100">
                         Marquage de la cible
                     </button>
                 </div>
             </div>
         </div>
+        <!-- Fixed Bottom -->
+        <div class="d-lg-none container-fluid fixed-bottom height-150 border bg-white">
+            <div class="d-flex justify-content-between h-100">
+                <div class="col-7 pr-5 p-0 d-flex flex-column justify-content-around">
+                    <div>
+                        <span class="text_size_18">30 - 40%</span>
+                    </div>
+                    <div>
+                        <h4 class="text_size_18 m-0">Elle va bientôt s'enfuir: </h4>
+                        <div class="container-fluid d-flex align-items-center" id="clockdiv2">
+                            <div class="row text_size_18">
+                                <span class="hours"></span>
+                                <span>&nbsp;:&nbsp;</span>
+                                <span class="minutes"></span>
+                                <span>&nbsp;:&nbsp;</span>
+                                <span class="seconds"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-5 d-flex align-items-center h-100 p-0">
+                    <button type="button" class="btn btn-danger w-100">
+                        Marquage
+                        <br>de la cible
+                    </button>
+                </div>
+            </div>
+        </div>
         <!-- Description -->
-        <div class="container col-12 col-lg-7 mt-5 float-left">
+        <div class="container col-12 col-lg-7 mt-5 float-lg-left" id="description">
             <!-- Header -->
             <div class="container col-12">
                 <h5 class="mb-0">Supérette</h5>
@@ -163,6 +192,13 @@
             <!-- Offers -->
             <div class="container col-12 mb-3">
                 <h4>Pars à la chasse: </h4>
+                <p>
+                    Aufgemerkt! Pantoffelheld und Dänenfilm grämen dufte Himmelfahrtskommando. Das gebeutelt Gamaschen. Das hanebüchen Kaiserwetter.
+                    Gesinde und Fracksausen jauchzen geflissentlich Ganove. Das frivol Übeltäter foppen. Die Drückeberger
+                    bauchpinseln das gemach Kittchen. Der garstig Ganove. Der stramm Pranger bohnern. Das blümerant Kaffeekränzchen
+                    lustwandeln. Die frivol Stümper piesacken. Himmelfahrtskommando und Himmelfahrtskommando duellieren halsstarrig
+                    Sülze. Der gebeutelt Schindluder lustwandeln. Lecko mio!
+                </p>
             </div>
             <!-- Localisation -->
             <div class="container col-12 mb-3">
@@ -177,12 +213,127 @@
             </div>
         </div>
     </div>
-    <footer>
+    <!--Footer-->
 
+    <footer class="page-footer font-small unique-color-dark pt-0">
+
+        <!--Grid column-->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+            <!--Facebook-->
+            <a class="fb-ic ml-0">
+                <i class="fa fa-facebook white-text mr-lg-4"> </i>
+            </a>
+            <!--Twitter-->
+            <a class="tw-ic">
+                <i class="fa fa-twitter white-text mr-lg-4"> </i>
+            </a>
+            <!--Google +-->
+            <a class="gplus-ic">
+                <i class="fa fa-google-plus white-text mr-lg-4">
+                </i>
+            </a>
+            <!--Linkedin-->
+            <a class="li-ic">
+                <i class="fa fa-linkedin white-text mr-lg-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+                <i class="fa fa-instagram white-text mr-lg-4">
+                </i>
+            </a>
+        </div>
+        <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+        </div>
+        </div>
+
+        <!--Footer Links-->
+        <div class="container mt-5 mb-4 text-center
+                          text-md-left">
+            <div class="row mt-3">
+
+                <!--First column-->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>Jäger</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0
+                                  d-inline-block mx-auto" style="width:
+                                  60px;">
+                    <p>Best Happy Hours near you!</p>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-2 col-lg-2 col-xl-2
+                                    mx-auto mb-4">
+                    <h6 class="text-uppercase
+                                      font-weight-bold">
+                        <strong>Products</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4
+                                      mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">MDBootstrap</a>
+                    </p>
+                    <p>
+                        <a href="#!">MDWordPress</a>
+                    </p>
+                    <p>
+                        <a href="#!">BrandFlow</a>
+                    </p>
+                </div>
+                <!--/.Second column-->
+
+                <!--Third column-->
+                <div class="col-md-3 col-lg-2 col-xl-2
+                                        mx-auto mb-4">
+                    <h6 class="text-uppercase
+                                          font-weight-bold">
+                        <strong>Liens utiles</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4
+                                          mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Mon compte</a>
+                    </p>
+                    <p>
+                        <a href="#!">Become an Affiliate</a>
+                    </p>
+                    <p>
+                        <a href="#!">Shipping Rates</a>
+                    </p>
+                </div>
+                <!--/.Third column-->
+
+                <!--Fourth column-->
+                <div class="col-md-4 col-lg-3
+                                            col-xl-3">
+                    <h6 class="text-uppercase
+                                              font-weight-bold">
+                        <strong>Contact</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2
+                                              mb-4 mt-0 d-inline-block
+                                              mx-auto" style="width: 60px;">
+                    <i class="fa fa-envelope mr-3"></i>
+                    <p>contact.jäger@gmail.com</p>
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <div class="container-fluid d-lg-none height-150 bg-white">
+
+        </div>
     </footer>
+    
+    <!--/.Footer Links-->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- JavaScript -->
+    <!-- Bootstrap -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -190,23 +341,50 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript">
-        $('#sidemenu').affix({
-            offset: {
-                top: $('#firstRow').offset().top + $('#firstRow').outerHeight(),
-                bottom: $('footer').outerHeight() + 50
-            }
-        });
-    </script>
+
     <!-- Slick -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script type="text/javascript">
+        /* SLICK option*/
+        $(document).on('ready', function () {
+            $(".slick_gallery").slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4500,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
     <script src="js/myscript.js"></script>
+    <script type="text/javascript">
+        /* Chrono */
+        var deadline = new Date(Date.parse(new Date()) + 25 * 60 * 60 * 1000);
+        initializeClock('clockdiv', deadline);
+        initializeClock('clockdiv2', deadline);
 
-
-
+        /* Size annonce */
+        var description = document.getElementById('description');
+        var annonce = document.getElementById('annonce');
+        addsize(description, annonce);
+        window.onresize = function(){
+            addsize(description, annonce);
+        }
+    </script>
 </body>
 
 </html>
