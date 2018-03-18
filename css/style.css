@@ -1,0 +1,50 @@
+
+.background-index{
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 25px;
+}
+
+.height-50{
+    height: 50px;
+}
+
+.height-150{
+    height: 150px;
+}
+
+.height-400{
+    height: 400px;
+}
+
+.img_slider{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overflow_hidden{
+    overflow: hidden;
+}
+.menu{
+    background-image: url("../images/menu.png");
+    background-size: cover;
+    height: 50px; 
+}
+
+.height-500{
+    height: 500px;
+}
+
+.height-2000{
+    height: 2000px;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+
+  
+
