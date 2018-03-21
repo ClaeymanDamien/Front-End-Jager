@@ -43,6 +43,7 @@
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 .fa {
   padding:8px;
   font-size: 30px;
@@ -57,6 +58,16 @@
 .fa:hover {
     opacity: 0.7;
 }
+=======
+.text_size_18{
+    font-size: 18px;
+}
+
+.text_size_24{
+    font-size: 24px;
+}
+
+>>>>>>> 5f2ff977053e2f7306232385da3125243a5e802c
 
 .fa-facebook {
   background: #3B5998;

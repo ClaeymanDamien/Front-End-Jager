@@ -1,25 +1,3 @@
-/* SLICK */
-$(document).on('ready', function () {
-    $(".slick_gallery").slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4500,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-});
-
 /*  Horloge */
 function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
@@ -56,41 +34,18 @@ function getTimeRemaining(endtime) {
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
   }
-  
-  var deadline = new Date(Date.parse(new Date()) + 25 * 60 * 60 * 1000);
 
-  initializeClock('clockdiv', deadline);
+/*Size*/
 
-/*
-
-var menu_check = document.getElementById('navbar_menu');
-
-if(menu_check.addEventListener('click', remove_menu))
-{
-    alert("ok1");
+function elementSize(element){
+    return element.offsetHeight;
 }
-if(menu_check.addEventListener('blur', add_menu))
-{
-    alert("ok2");
-}        
 
+function addheight(element,size){
+    element.style.height = size + "px";
 
-var remove_menu = function(){
-    alert('ok');
-    var remove_menu_img = document.createElement("img");
-    remove_menu_img.src = "images/menu.png";
-    remove_menu_img.classList.add("img-fluid height-50");
-    remove_menu_img.alt = "menu";
+}
 
-    document.getElementById('navbar_menu').appendChild(remove_menu_img); //Sur l'id "unknow" on greffe le nouveau élément comme enfant
-};
-
-var add_menu = function(){
-    var remove_menu_img = document.createElement("img");
-    remove_menu_img.src = "images/menu_close.png";
-    remove_menu_img.classList.add("img-fluid height-50");
-    remove_menu_img.alt = "menu";
-
-    document.getElementById('navbar_menu').appendChild(remove_menu_img); //Sur l'id "unknow" on greffe le nouveau élément comme enfant
-};*/
-
+function addsize(element_size, element_add){
+    addheight(element_add,elementSize(element_size) + 45);
+}
