@@ -1,10 +1,10 @@
 .background-index{
-    background-image: url("../images/herbe.jpg");
+    background-image: url("../images/ok.jpg");
     background-size: cover;
     height: 420px;
 }
 
-.height-50{
+.height-40{
     height: 40px;
 }
 
@@ -39,11 +39,6 @@
     height: 2000px;
 }
 
-.overflow-hidden{
-    overflow: hidden;
-}
-
-<<<<<<< HEAD
 .fa {
   padding:8px;
   font-size: 30px;
@@ -58,16 +53,6 @@
 .fa:hover {
     opacity: 0.7;
 }
-=======
-.text_size_18{
-    font-size: 18px;
-}
-
-.text_size_24{
-    font-size: 24px;
-}
-
->>>>>>> 5f2ff977053e2f7306232385da3125243a5e802c
 
 .fa-facebook {
   background: #3B5998;
@@ -89,12 +74,6 @@
   color: white;
 }
 
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
+.modal-lg {
+    max-width: 80%;
 }
