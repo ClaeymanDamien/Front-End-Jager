@@ -39,6 +39,88 @@
     height: 2000px;
 }
 
+/**** FORM ICON ***/
+
+.nom_icon{
+    background-image: url("../images/ic_account_circle_black_36dp.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.nom_icon:focus{
+    background-image: url("../images/ic_account_circle_black_36dp.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.mdp_icon{
+    background-image: url("../images/ic_lock_black_36dp.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.mdp_icon:focus{
+    background-image: url("../images/ic_lock_black_36dp.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.mail_icon{
+    background-image: url("../images/ic_mail_36pt.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.mail_icon:focus{
+    background-image: url("../images/ic_mail_36pt.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.store_icon{
+    background-image: url("../images/ic_store_mall_directory_black_24dp.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.store_icon:focus{
+    background-image: url("../images/ic_store_mall_directory_black_24dp.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.location_icon{
+    background-image: url("../images/ic_place_black_24dp.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+.location_icon:focus{
+    background-image: url("../images/ic_place_black_24dp.png");
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
 .fa {
   padding:8px;
   font-size: 30px;
