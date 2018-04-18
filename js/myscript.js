@@ -147,3 +147,97 @@ function sectionInscription(value) {
         }
     }
 }
+
+/**Les Filtres du feed */
+
+function nothing_filter(check){
+    var element = document.getElementById('all_filter');
+    if(check){
+        displayBlock(element);
+    }
+    else{
+        displayNone(element);
+    }
+    
+}
+
+function unckeck_all_checkbox(){
+    var select_filtre = document.querySelectorAll('#select_filter input');
+    for(var i = 0; i < select_filtre.length; i++){
+            select_filtre[i].checked = false;
+    }
+}
+
+function delete_all_filter() {
+    var element = document.querySelectorAll('#list_filter div');
+    
+    for(var i = 0; i < element.length; i++){
+        element[i].parentNode.removeChild(element[i]);
+    }
+    
+    nothing_filter(false);
+    unckeck_all_checkbox();
+    
+}
+
+function delete_filter(name) {
+    var parent = name.parentNode;
+
+    parent.parentNode.removeChild(parent);
+}
+
+function unckeck_checkbox(filtre){
+    var select_filtre = document.querySelectorAll('#select_filter input');
+    for(var i = 0; i < select_filtre.length; i++){
+        if(select_filtre[i].value == filtre.id){
+            select_filtre[i].checked = false;
+        }
+    }
+}
+
+function check_if_filter(){
+    if (document.querySelector('#all_filter .close') == null) {
+        nothing_filter(false);
+    }
+}
+function delete_filter_check(filtre, all_filtre) {
+    var parent = filtre.parentNode.parentNode;
+    var length = parent.childNodes.length;
+    unckeck_checkbox(filtre);
+    delete_filter(filtre);
+    check_if_filter();
+}
+
+function creat_filter(element){
+    var mainDiv = document.createElement('div');
+        var button = document.createElement('button');
+        var span = document.createElement('span');
+        var spanText = document.createTextNode(element.nextSibling.nextSibling.innerHTML);
+        var buttonText = document.createTextNode('\u00D7');
+        
+        mainDiv.setAttribute('class','mb-1 p-0');
+        button.setAttribute('id',element.value);
+        button.setAttribute('onclick',"delete_filter_check(this,'all_filter')");
+        button.type ="button";
+        button.setAttribute('class','close');
+
+        button.appendChild(buttonText);
+        span.appendChild(spanText);
+
+        mainDiv.appendChild(button);
+        mainDiv.appendChild(span);
+
+        document.getElementById("list_filter").appendChild(mainDiv);
+}
+
+function add_filter(element) {
+    if (element.checked) {
+        nothing_filter(true);
+        creat_filter(element);
+        
+    }
+    else {
+        var filtre_uncheck = document.getElementById(element.value);
+        delete_filter_check(filtre_uncheck,'all_filter');  
+    }
+}

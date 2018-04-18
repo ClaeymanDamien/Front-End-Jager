@@ -14,6 +14,8 @@
 
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -24,8 +26,8 @@
         <a href="index.html">
             <img class="img-fluid height-40" src="images/logo.png" alt="Logo Jäger">
         </a>
-        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="border-0 navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <img src="images/menu.png" alt="menu" class="img-fluid height-40">
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
@@ -124,15 +126,379 @@
         </div>
     </div>
     <!-- Search -->
-    <div class="sticky-top height-70 bg-dark">
-
+    <div class="bg-white height-70 pt-2 pb-2 border-bottom d-none d-xl-flex align-items-center">
+        <form class="col-10 p-0 offset-1 d-flex align-items-center justify-content-between">
+            <input class="form-control col-4 border-top-0 border-right-0 border-bottom-0 rounded-0" type="text" placeholder="Lieu, restaurant...">
+            <input class="border border-top-0 border-right-0 border-bottom-0 rounded-0" id="datepicker" placeholder="Date" />
+            <input class="border border-top-0 border-right-0 border-bottom-0 rounded-0" id="timepicker" placeholder="Heure" />
+            <input class="form-control col-1 border-right-0 border-top-0 border-bottom-0 rounded-0" type="number" placeholder="Pers.">
+            <button type="submit" class="col-2 btn btn-block btn-dark btn-primary">Rechercher</button>
+        </form>
     </div>
-    
 
-    <div class="container-fluid height-2000">
-        <li class="nav-item">
-           <a data-toggle="modal" data-target="#myModalLabel" class="nav-link" href="#">loL</a>
-        </li>
+    <!-- Feed -->
+    <!-- Filtre fixed bottom -->
+    <button data-toggle="modal" data-target="#filter_modal" class="d-lg-none btn btn-link text_decoration_none container-fluid fixed-bottom height-70 border-top bg-white">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <span class="fonts_24">Filtres</span>
+        </div>
+    </button>
+    <!-- The Modal -->
+    <div class="modal fade" id="filter_modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        
+                    </div>
+    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <strong>Prochainement...</strong>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer d-flex justify-content-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container mt-5 p-0 col-12 offset-lg-1 col-lg-10 d-flex">
+        <!-- Filtre -->
+        <div class="col-lg-3 p-0 d-none d-lg-block">
+            <div class="border pb-3">
+                <!-- Filtre actif -->
+                <div id="all_filter" class="container-fluid p-0 mb-3">
+                    <div class="container d-flex border-bottom pt-2 pb-2">
+                        <div class="offset-2 col-8 d-flex justify-content-center">
+                            <h5> Ma sélection</h5>
+                        </div>
+                        <div class="offset-1">
+                            <boutton onclick="delete_all_filter()" class="btn btn-link p-0 m-0">
+                                <img src="images/ic_delete_black_24dp.png" alt="Delete">
+                            </boutton>
+                        </div>
+                    </div>
+                    <div id="list_filter" class="container-fluid pt-2 pl-3 pr-3">
+
+                    </div>
+                </div>
+
+                <!-- Selection Filtre -->
+                <div id="select_filter" class="container-fluid p-0">
+                    <div class="col-12 d-none d-lg-flex justify-content-center pt-2 pb-2">
+                        <h5>Affiner la recherche</h5>
+                    </div>
+                    <div class="container-fluid p-0 pb-2">
+                        <div class="bg-light col-12 d-flex justify-content-center pt-2 pb-2 border-bottom border-top mb-2">
+                            <span>Promotion:</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="5%" onchange="add_filter(this)">
+                            <span>Promotion: 5%</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="10%" onchange="add_filter(this)">
+                            <span>Promotion: 10%</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="20%" onchange="add_filter(this)">
+                            <span>Promotion: 20%</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="30%" onchange="add_filter(this)">
+                            <span>Promotion: 30%</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="40%" onchange="add_filter(this)">
+                            <span>Promotion: 40%</span>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-0 pb-2">
+                        <div class="bg-light col-12 d-flex justify-content-center pt-2 pb-2 border-bottom border-top mb-2">
+                            <span>Lieu:</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Paris" onchange="add_filter(this)">
+                            <span>Paris</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Arcueil" onchange="add_filter(this)">
+                            <span>Arcueil</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Villejuif" onchange="add_filter(this)">
+                            <span>Villejuif</span>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-0 pb-2">
+                        <div class="bg-light col-12 d-flex justify-content-center pt-2 pb-2 border-bottom border-top mb-2">
+                            <span>Type:</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Restaurant" onchange="add_filter(this)">
+                            <span>Restaurant</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Auberge" onchange="add_filter(this)">
+                            <span>Auberge</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Fast-food" onchange="add_filter(this)">
+                            <span>Fast-food</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Crous" onchange="add_filter(this)">
+                            <span>Crous</span>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-0 pb-2">
+                        <div class="bg-light col-12 d-flex justify-content-center pt-2 pb-2 border-bottom border-top mb-2">
+                            <span>Prix:</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Elevé" onchange="add_filter(this)">
+                            <span>Elevé</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Modéré" onchange="add_filter(this)">
+                            <span>Modéré</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Faible" onchange="add_filter(this)">
+                            <span>Faible</span>
+                        </div>
+                        <div class="col-12 pl-3 pr-3">
+                            <input type="checkbox" value="Discount" onchange="add_filter(this)">
+                            <span>Discount</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Feed Announce -->
+        <div class="col-12 col-lg-9  p-0 pl-lg-5">
+            <!-- Container Announce -->
+            <div class="container-fluid p-0">
+                <!-- Announce Box -->
+                <a href="#" class="container-fluid pl-3 pr-3 announce_feed d-flex align-items-center height-175 text_decoration_none">
+                    <div class="col-12 p-0 d-flex">
+                        <div class="col-3 col-lg-4 p-0 height-150 d-flex justify-content-center align-items-center">
+                            <img src="images/bg.jpg" class="img-fluid" alt="bg">
+                        </div>
+                        <div class="col-9 col-lg-8 p-0 height-150 d-block d-lg-flex flex-lg-row">
+                            <div class="col-12 col-lg-9 p-0 pl-3 pr-3 d-flex flex-column justify-content-lg-between">
+                                <div class="p-0">
+                                    <h5 class="text-dark">Franck Provost</h5>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary d-block">17-19 Boulevard Paul Vaillant Couturier, 94800 Villejuif, France</span>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary">Prix moyen: 20,90€</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 p-0 pl-3 pr-3 pl-lg-0 pr-lg-0  d-lg-flex justify-content-lg-center align-items-lg-center">
+                                <span class="text-danger d-none d-lg-block display-4">-40%</span>
+                                <span class="text-danger d-block d-lg-none fonts_20">-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- /Announce Box -->
+                <a href="#" class="container-fluid pl-3 pr-3 announce_feed d-flex align-items-center height-175 text_decoration_none">
+                    <div class="col-12 p-0 d-flex">
+                        <div class="col-3 col-lg-4 p-0 height-150 d-flex justify-content-center align-items-center">
+                            <img src="images/bg.jpg" class="img-fluid" alt="bg">
+                        </div>
+                        <div class="col-9 col-lg-8 p-0 height-150 d-block d-lg-flex flex-lg-row">
+                            <div class="col-12 col-lg-9 p-0 pl-3 pr-3 d-flex flex-column justify-content-lg-between">
+                                <div class="p-0">
+                                    <h5 class="text-dark">Franck Provost</h5>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary d-block">17-19 Boulevard Paul Vaillant Couturier, 94800 Villejuif, France</span>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary">Prix moyen: 20,90€</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 p-0 pl-3 pr-3 pl-lg-0 pr-lg-0  d-lg-flex justify-content-lg-center align-items-lg-center">
+                                <span class="text-danger d-none d-lg-block display-4">-40%</span>
+                                <span class="text-danger d-block d-lg-none fonts_20">-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="container-fluid pl-3 pr-3 announce_feed d-flex align-items-center height-175 text_decoration_none">
+                    <div class="col-12 p-0 d-flex">
+                        <div class="col-3 col-lg-4 p-0 height-150 d-flex justify-content-center align-items-center">
+                            <img src="images/bg.jpg" class="img-fluid" alt="bg">
+                        </div>
+                        <div class="col-9 col-lg-8 p-0 height-150 d-block d-lg-flex flex-lg-row">
+                            <div class="col-12 col-lg-9 p-0 pl-3 pr-3 d-flex flex-column justify-content-lg-between">
+                                <div class="p-0">
+                                    <h5 class="text-dark">Franck Provost</h5>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary d-block">17-19 Boulevard Paul Vaillant Couturier, 94800 Villejuif, France</span>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary">Prix moyen: 20,90€</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 p-0 pl-3 pr-3 pl-lg-0 pr-lg-0  d-lg-flex justify-content-lg-center align-items-lg-center">
+                                <span class="text-danger d-none d-lg-block display-4">-40%</span>
+                                <span class="text-danger d-block d-lg-none fonts_20">-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="container-fluid pl-3 pr-3 announce_feed d-flex align-items-center height-175 text_decoration_none">
+                    <div class="col-12 p-0 d-flex">
+                        <div class="col-3 col-lg-4 p-0 height-150 d-flex justify-content-center align-items-center">
+                            <img src="images/bg.jpg" class="img-fluid" alt="bg">
+                        </div>
+                        <div class="col-9 col-lg-8 p-0 height-150 d-block d-lg-flex flex-lg-row">
+                            <div class="col-12 col-lg-9 p-0 pl-3 pr-3 d-flex flex-column justify-content-lg-between">
+                                <div class="p-0">
+                                    <h5 class="text-dark">Franck Provost</h5>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary d-block">17-19 Boulevard Paul Vaillant Couturier, 94800 Villejuif, France</span>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary">Prix moyen: 20,90€</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 p-0 pl-3 pr-3 pl-lg-0 pr-lg-0  d-lg-flex justify-content-lg-center align-items-lg-center">
+                                <span class="text-danger d-none d-lg-block display-4">-40%</span>
+                                <span class="text-danger d-block d-lg-none fonts_20">-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="container-fluid pl-3 pr-3 announce_feed d-flex align-items-center height-175 text_decoration_none">
+                    <div class="col-12 p-0 d-flex">
+                        <div class="col-3 col-lg-4 p-0 height-150 d-flex justify-content-center align-items-center">
+                            <img src="images/bg.jpg" class="img-fluid" alt="bg">
+                        </div>
+                        <div class="col-9 col-lg-8 p-0 height-150 d-block d-lg-flex flex-lg-row">
+                            <div class="col-12 col-lg-9 p-0 pl-3 pr-3 d-flex flex-column justify-content-lg-between">
+                                <div class="p-0">
+                                    <h5 class="text-dark">Franck Provost</h5>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary d-block">17-19 Boulevard Paul Vaillant Couturier, 94800 Villejuif, France</span>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary">Prix moyen: 20,90€</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 p-0 pl-3 pr-3 pl-lg-0 pr-lg-0  d-lg-flex justify-content-lg-center align-items-lg-center">
+                                <span class="text-danger d-none d-lg-block display-4">-40%</span>
+                                <span class="text-danger d-block d-lg-none fonts_20">-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="container-fluid pl-3 pr-3 announce_feed d-flex align-items-center height-175 text_decoration_none">
+                    <div class="col-12 p-0 d-flex">
+                        <div class="col-3 col-lg-4 p-0 height-150 d-flex justify-content-center align-items-center">
+                            <img src="images/bg.jpg" class="img-fluid" alt="bg">
+                        </div>
+                        <div class="col-9 col-lg-8 p-0 height-150 d-block d-lg-flex flex-lg-row">
+                            <div class="col-12 col-lg-9 p-0 pl-3 pr-3 d-flex flex-column justify-content-lg-between">
+                                <div class="p-0">
+                                    <h5 class="text-dark">Franck Provost</h5>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary d-block">17-19 Boulevard Paul Vaillant Couturier, 94800 Villejuif, France</span>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary">Prix moyen: 20,90€</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 p-0 pl-3 pr-3 pl-lg-0 pr-lg-0  d-lg-flex justify-content-lg-center align-items-lg-center">
+                                <span class="text-danger d-none d-lg-block display-4">-40%</span>
+                                <span class="text-danger d-block d-lg-none fonts_20">-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="container-fluid pl-3 pr-3 announce_feed d-flex align-items-center height-175 text_decoration_none">
+                    <div class="col-12 p-0 d-flex">
+                        <div class="col-3 col-lg-4 p-0 height-150 d-flex justify-content-center align-items-center">
+                            <img src="images/bg.jpg" class="img-fluid" alt="bg">
+                        </div>
+                        <div class="col-9 col-lg-8 p-0 height-150 d-block d-lg-flex flex-lg-row">
+                            <div class="col-12 col-lg-9 p-0 pl-3 pr-3 d-flex flex-column justify-content-lg-between">
+                                <div class="p-0">
+                                    <h5 class="text-dark">Franck Provost</h5>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary d-block">17-19 Boulevard Paul Vaillant Couturier, 94800 Villejuif, France</span>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary">Prix moyen: 20,90€</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 p-0 pl-3 pr-3 pl-lg-0 pr-lg-0  d-lg-flex justify-content-lg-center align-items-lg-center">
+                                <span class="text-danger d-none d-lg-block display-4">-40%</span>
+                                <span class="text-danger d-block d-lg-none fonts_20">-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="container-fluid pl-3 pr-3 announce_feed d-flex align-items-center height-175 text_decoration_none">
+                    <div class="col-12 p-0 d-flex">
+                        <div class="col-3 col-lg-4 p-0 height-150 d-flex justify-content-center align-items-center">
+                            <img src="images/bg.jpg" class="img-fluid" alt="bg">
+                        </div>
+                        <div class="col-9 col-lg-8 p-0 height-150 d-block d-lg-flex flex-lg-row">
+                            <div class="col-12 col-lg-9 p-0 pl-3 pr-3 d-flex flex-column justify-content-lg-between">
+                                <div class="p-0">
+                                    <h5 class="text-dark">Franck Provost</h5>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary d-block">17-19 Boulevard Paul Vaillant Couturier, 94800 Villejuif, France</span>
+                                </div>
+                                <div class="p-0">
+                                    <span class="text-secondary">Prix moyen: 20,90€</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 p-0 pl-3 pr-3 pl-lg-0 pr-lg-0  d-lg-flex justify-content-lg-center align-items-lg-center">
+                                <span class="text-danger d-none d-lg-block display-4">-40%</span>
+                                <span class="text-danger d-block d-lg-none fonts_20">-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Pagination -->
+            <div class="container-fluid d-flex justify-content-center pt-3 pb-3 p-0">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link text-dark" href="#">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link text-dark" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link text-dark" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link text-dark" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link text-dark" href="#">Next</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 
@@ -222,7 +588,29 @@
         <!--/.Copyright -->
     </footer>
     <!--/.Footer-->
+    <!-- Space for div fix bottom-->
+    <div class="container-fluid d-lg-none height-70 bg-white">
+
+        </div>
+    
     <!-- Optional JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/gijgo.min.js" type="text/javascript"></script>
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap',
+            format: 'dd mmm',
+            modal: true,
+            iconsLibrary: 'fontawesome'
+        });
+        $('#timepicker').timepicker({
+            uiLibrary: 'bootstrap',
+            mode: '24hr',
+            modal: true,
+            iconsLibrary: 'fontawesome'
+        });
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -230,13 +618,13 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <!-- Menu Toggle Script -->
-    <script>
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
+
+    <script src="js/myscript.js"></script>
+    <script type="text/javascript">
+        /*Delete Filter*/
+        nothing_filter(false);
     </script>
+
 </body>
 
 </html>
