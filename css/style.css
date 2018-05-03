@@ -12,9 +12,19 @@
     height: 24px;
 }
 
-
+.height-30{
+    height: 30px;
+}
 .height-40{
     height: 40px;
+}
+
+.mt-50{
+    margin-top: 50px;
+}
+
+.height-50{
+    height: 50px;
 }
 
 .height-70{
@@ -254,3 +264,14 @@
   .announce_feed:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
+
+/** MODAL **/
+
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content-full {
+    min-height: 100vh;
+}
