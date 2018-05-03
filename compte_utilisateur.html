@@ -24,14 +24,14 @@
         <a href="index.html">
             <img class="img-fluid height-40" src="images/logo.png" alt="Logo Jäger">
         </a>
-        <button class="border-0 navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
             <img src="images/menu.png" alt="menu" class="img-fluid height-40">
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
             <ul class="navbar-nav mt-2 mt-lg-0">
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Accueil</a>
+                    <a class="nav-link" href="index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <li class="nav-item">
@@ -42,15 +42,6 @@
                     <li class="nav-item">
                         <a data-toggle="modal" data-target="#connexion" class="nav-link" href="#">Connexion</a>
                     </li>
-                </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Allan
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="compte_utilisateur.html">Bons plans</a>
-                            <a class="dropdown-item" href="#">Déconnexion</a>
                 </li>
             </ul>
         </div>
@@ -68,17 +59,6 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <a href="#" class="mb-3 d-block">
-                        <div class="container-fluid d-flex justify-content-between align-items-center height-50 rounded" style="background-color: #415f9b;">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img class="img-fluid height-30" src="images/logo-fb.png" alt="logo facebook">
-                            </div>
-                            <div class=" w-100 d-flex align-items-center justify-content-center">
-                                <span style="color: white">S'inscrire avec Facebook</span>
-                            </div>
-                        </div>
-                    </a>
-
                     <form action="#">
                         <div class="form-group">
                             <input type="text" class="form-control pl-5 nom_icon" id="nom" placeholder="Nom">
@@ -103,11 +83,25 @@
                             <a href="inscription.html?type=pro" class="text-info">Inscription</a>
                         </span>
                     </div>
+                    <div class="mt-3">
+                        <!--Social buttons-->
+                        <a class="btn-floating btn-sm btn-fb mx-1">
+                            <i class="fa fa-facebook"> </i>
+                        </a>
+                        <a class="btn-floating btn-sm btn-tw mx-1">
+                            <i class="fa fa-twitter"> </i>
+                        </a>
+                        <a class="btn-floating btn-sm btn-gplus mx-1">
+                            <i class="fa fa-google"> </i>
+                        </a>
+                        <a class="btn-floating btn-sm btn-li mx-1">
+                            <i class="fa fa-linkedin"> </i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- The Modal -->
     <div class="modal fade" id="connexion">
@@ -121,16 +115,6 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <a href="#" class="mb-3 d-block">
-                        <div class="container-fluid d-flex justify-content-between align-items-center height-50 rounded" style="background-color: #415f9b;">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img class="img-fluid height-30 mr-3" src="images/logo-fb.png" alt="logo facebook">
-                            </div>
-                            <div class=" w-100 d-flex align-items-center justify-content-center">
-                                <span class="ml-3" style="color: white">Se connecter avec Facebook</span>
-                            </div>
-                        </div>
-                    </a>
                     <form action="#">
                         <div class="form-group">
                             <input type="email" class="form-control mail_icon pl-5" placeholder="Adresse e-mail">
@@ -153,34 +137,36 @@
                             <a href="inscription.html" class="text-info">Inscription</a>
                         </span>
                     </div>
+                    <div class="mt-3">
+                        <a class="btn-floating btn-sm btn-fb mx-1">
+                            <i class="fa fa-facebook"> </i>
+                        </a>
+                        <a class="btn-floating btn-sm btn-tw mx-1">
+                            <i class="fa fa-twitter"> </i>
+                        </a>
+                        <a class="btn-floating btn-sm btn-gplus mx-1">
+                            <i class="fa fa-google"> </i>
+                        </a>
+                        <a class="btn-floating btn-sm btn-li mx-1">
+                            <i class="fa fa-linkedin"> </i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="alert sticky-top endl-connexion alert-success alert-dismissible fade show">
+    <div class="alert endl-connexion sticky-top alert-success alert-dismissible fade show">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong>Bonjour Allan,</strong> vous avez
             <a href="compte_utilisateur.html" class="alert-link"> 1 bon plan en cours</a>.
         </div>
 
-    <!-- Index form -->
-    <div class="container-fluid background-index d-flex align-items-center mb-5">
-        <form class="form-inline offset-md-3 col-md-6" action="/action_page.php">
-            <div class="input-group mb-3 w-100">
-                <input type="text" class="form-control" placeholder="Que recherchez-vous?" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">Go!</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
     <!-- Annonces -->
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="row">
             <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
+                <div class="card p-0 endl-card">
                     <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Franprix</h4>
@@ -196,93 +182,7 @@
                     </div>
                 </div>
             </a>
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
-                            </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
-                            </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
-                            </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
-                            </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
-                            </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+
     <!--Footer-->
     <footer class="col-12">
         <!--Footer Links-->

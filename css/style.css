@@ -3,6 +3,15 @@
     background-size: cover;
     height: 420px;
 }
+
+.endl-card{
+    margin-top: 20px;
+}
+
+.endl-connexion{
+    margin-bottom: 0px;
+}
+
 /** Fonts **/
 
 .fonts_20{
@@ -12,9 +21,12 @@
     height: 24px;
 }
 
+<<<<<<< HEAD
 .height-30{
     height: 30px;
 }
+=======
+>>>>>>> 537779ee4f1a7308d8c46498de273f71e8a38d7f
 .height-40{
     height: 40px;
 }
@@ -213,8 +225,6 @@
 {
     display:none;
 }
-
-
 
 #locationField, #controls {
         position: relative;
