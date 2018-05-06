@@ -1,9 +1,19 @@
+/** Back ground **/
 .background-index{
     background-image: url("../images/ok.jpg");
     background-size: cover;
     height: 420px;
 }
 
+.discover-bg{
+    background-image: url("../images/discover-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.white-bg{
+    background-color: white;
+}
 .endl-card{
     margin-top: 20px;
 }
@@ -17,16 +27,19 @@
 .fonts_20{
     font-size: 20px;
 }
+
+.fonts-24{
+    font-size: 24px;
+}
+
+/** Height **/
 .height-24{
     height: 24px;
 }
 
-<<<<<<< HEAD
 .height-30{
     height: 30px;
 }
-=======
->>>>>>> 537779ee4f1a7308d8c46498de273f71e8a38d7f
 .height-40{
     height: 40px;
 }
@@ -49,6 +62,14 @@
 
 .height-175{
     height: 175px;
+}
+
+.height-200{
+    height: 200px;
+}
+
+.height-300{
+    height: 300px;
 }
 
 .height-400{
@@ -284,4 +305,12 @@
 
 .modal-full .modal-content-full {
     min-height: 100vh;
+}
+
+/** Image Responsive **/
+.img-responsive{
+    display: block;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%;
 }

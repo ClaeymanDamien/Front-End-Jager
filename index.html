@@ -48,9 +48,10 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         Allan
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="compte_utilisateur.html">Bons plans</a>
-                            <a class="dropdown-item" href="#">Déconnexion</a>
+                    <div class="dropdown-menu dropdown-menu-right" style="z-index: 9999;">
+                        <a class="dropdown-item" href="compte_utilisateur.html">Bons plans</a>
+                        <a class="dropdown-item" href="#">Déconnexion</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -159,10 +160,10 @@
     </div>
 
     <div class="alert sticky-top endl-connexion alert-success alert-dismissible fade show">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Bonjour Allan,</strong> vous avez
-            <a href="compte_utilisateur.html" class="alert-link"> 1 bon plan en cours</a>.
-        </div>
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Bonjour Allan,</strong> vous avez
+        <a href="compte_utilisateur.html" class="alert-link"> 1 bon plan en cours</a>.
+    </div>
 
     <!-- Index form -->
     <div class="container-fluid background-index d-flex align-items-center mb-5">
@@ -178,206 +179,439 @@
 
     <!-- Annonces -->
     <div class="container-fluid ">
-        <div class="row">
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
+        <!-- Catégorie -->
+        <div class="container-fluid mb-3">
+            <div class="p-0 m-0 pb-3">
+                <h4 class="pl-2">Des annonces qui vous correspondent</h4>
+            </div>
+            <div class="row m-0 p-0">
+                <div class="col-6 col-md-4 col-lg-4 col-xl-3 d-flex pl-2 pr-2 pb-4">
+                    <div class="d-flex flex-column flex-lg-row border rounded">
+                        <div class="col-lg-5 p-0">
+                            <div class="img-responsive rounded">
+                                <img class="img-fluid" src="images/beauty.jpg" alt="bg">
                             </div>
-                            <div class="m-0 container-fluid col-7 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 10 - 30% </span>
-                            </div>
+                        </div>
+                        <div class="col-lg-7 pt-3 pb-3 p-lg-0 d-flex align-items-center justify-content-center">
+                            <h6 class="m-0">Beauté</h6>
                         </div>
                     </div>
                 </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
+                <div class="col-6 col-md-4 col-lg-4 col-xl-3 d-flex pl-2 pr-2 pb-4">
+                    <div class="d-flex flex-column flex-lg-row border rounded">
+                        <div class="col-lg-5 p-0">
+                            <div class="img-responsive rounded">
+                                <img class="img-fluid" src="images/restaurants.jpg" alt="bg">
                             </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
+                        </div>
+                        <div class="col-lg-7 pt-3 pb-3 p-lg-0 d-flex align-items-center justify-content-center">
+                            <h6 class="m-0">Restaurants</h6>
                         </div>
                     </div>
                 </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
+                <div class="col-6 col-md-4 col-lg-4 col-xl-3 d-flex pl-2 pr-2 pb-4">
+                    <div class="d-flex flex-column flex-lg-row border rounded">
+                        <div class="col-lg-5 p-0">
+                            <div class="img-responsive rounded">
+                                <img class="img-fluid" src="images/wakeboard.jpg" alt="bg">
                             </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
+                        </div>
+                        <div class="col-lg-7 pt-3 pb-3 p-lg-0 d-flex align-items-center justify-content-center">
+                            <h6 class="m-0">Activités</h6>
                         </div>
                     </div>
                 </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
+                <div class="col-6 col-md-4 col-xl-3 d-flex pl-2 pr-2 pb-4">
+                    <div class="d-flex flex-column flex-lg-row border rounded">
+                        <div class="col-lg-5 p-0">
+                            <div class="img-responsive rounded">
+                                <img class="img-fluid" src="images/plombier.jpg" alt="bg">
                             </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
+                        </div>
+                        <div class="col-lg-7 pt-3 pb-3 p-lg-0 d-flex align-items-center justify-content-center">
+                            <h6 class="m-0">Technique</h6>
                         </div>
                     </div>
                 </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
-                            </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="annonces.html" style="text-decoration:none" class="underline_none text-dark container-fluid col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card p-0">
-                    <img class="card-img-top" src="images/bg3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Franprix</h4>
-                        <p class="card-text">Un menu petit déjeuné avec un bon jus d'orange bio accompagé de sa petite viennoiserie</p>
-                        <div class="row justify-content-between">
-                            <div class="m-0 container-fluid col-5">
-                                <span>Villejuif</span>
-                            </div>
-                            <div class="m-0 container-fluid col-5 text-right">
-                                <span class="text-light border border-primary bg-primary rounded p-2"> 30% </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <!--Footer-->
-    <footer class="col-12">
-        <!--Footer Links-->
-        <div class="container-fluid mb-4">
-            <div class="row mt-4 mb-5">
-                <!--First column-->
-                <div class="col-12 col-md-3 mb-4">
-                    <div class="container-fluid d-flex justify-content-center justify-content-md-start pb-2 p-0 mb-4 border border-top-0 border-right-0 border-left-0">
-                        <h4>Jäger</h4>
-                    </div>
-                    <div class="d-flex justify-content-center justify-content-md-start">
-                        <p>Best Happy Hours near you.</p>
-                    </div>
-
-                </div>
-                <!--/.First column-->
-
-                <!--Second column-->
-                <div class="col-12 col-md-3 mb-4">
-                    <div class="container-fluid d-flex justify-content-center justify-content-md-start pb-2 p-0 mb-4 border border-top-0 border-right-0 border-left-0">
-                        <h4>Jäger</h4>
-                    </div>
-                    <div class="container-fluid d-flex flex-column align-items-center align-items-md-start">
-                        <a href="#">Me géolocaliser</a>
-                        <a href="#">Accueil</a>
-                        <a href="#">Qui sommes-nous?</a>
-                    </div>
-                </div>
-                <!--/.Second column-->
-
-                <!--Third column-->
-                <div class="col-12 col-md-3 mb-4">
-                    <div class="container-fluid d-flex justify-content-center justify-content-md-start pb-2 p-0 mb-4 border border-top-0 border-right-0 border-left-0">
-                        <h4>Jäger</h4>
-                    </div>
-                    <div class="container-fluid d-flex flex-column align-items-center align-items-md-start">
-                        <a href="#">Mon compte</a>
-                        <a href="inscription.html">Inscription</a>
-                        <a href="#">Aide</a>
-                    </div>
-                </div>
-                <!--/.Third column-->
-
-                <!--Fourth column-->
-                <div class="col-12 col-md-3 mb-4">
-                    <div class="container-fluid d-flex justify-content-center justify-content-md-start  pb-2 p-0 mb-4 border border-top-0 border-right-0 border-left-0">
-                        <h4>Contact</h4>
-                    </div>
-                    <div class="d-flex justify-content-center justify-content-md-start">
-                        <span>contact@jäger.com</span>
-                    </div>
-                </div>
-                <!--/.Fourth column-->
 
             </div>
         </div>
-        <!--/.Footer Links-->
+        <!-- /catégorie -->
+        <!-- Offres à proximitées-->
+        <div class="container-fluid mb-3">
+            <div class="p-0 m-0 pb-3">
+                <h4 class="pl-2">Offres prochent de vous</h4>
+            </div>
+            <!-- Liste des annonces -->
+            <div class="row m-0 p-0">
 
-        <!--Social buttons-->
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            <a class="btn-floating btn-sm btn-fb mx-1">
-                <i class="fa fa-facebook"> </i>
-            </a>
-            <a class="btn-floating btn-sm btn-tw mx-1">
-                <i class="fa fa-twitter"> </i>
-            </a>
-            <a class="btn-floating btn-sm btn-gplus mx-1">
-                <i class="fa fa-google"> </i>
-            </a>
-            <a class="btn-floating btn-sm btn-li mx-1">
-                <i class="fa fa-linkedin"> </i>
-            </a>
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg.jpg" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg2.JPG" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg.jpg" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg2.JPG" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg.jpg" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg2.JPG" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg.jpg" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg2.JPG" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- /Liste des annonces -->
+            <div class="p-0 pl-2 m-0 pb-3">
+                <a href="feed.html" class="text-dark">Tout afficher ></a>
+            </div>
+        </div>
+        <!-- Jager Discover -->
+        <div class="container-fluid mb-3">
+            <div class="p-0 m-0 pb-3">
+                <h4 class="pl-2">Découvrez Jager</h4>
+            </div>
+            <div class="discover-bg height-300 ml-2 mr-2">
+                <div class="col-12 col-sm-9 col-md-7 col-lg-6 col-xl-5 h-100 pl-2 pr-2 pl-md-3 pr-md-3 pl-lg-4 pr-lg-4 pl-xl-5 pr-xl-5 d-flex flex-column justify-content-center">
+                    <span class="mb-3 d-block text-light text-justify font-weight-bold fonts-20">Des promotions ponctuelles prochent de chez vous, dans un temps restraint. Dépechez vous!</span>
+                    <a href="#" class="mt-3 btn-block btn btn-light font-weight-bold">Découvrez le concept Jager</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Jager discover -->
+        <!-- Offres bientôt fini-->
+        <div class="container-fluid pb-3">
+            <div class="p-0 m-0 pb-3">
+                <h4 class="pl-2">Elles vont disparaître</h4>
+            </div>
+            <!-- Liste des annonces -->
+            <div class="row m-0 p-0">
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg.jpg" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg2.JPG" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg.jpg" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg2.JPG" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg.jpg" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg2.JPG" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg.jpg" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3 p-0 pl-2 pr-2 pb-4">
+                    <a href="annonces.html" style="text-decoration:none" class="text-dark">
+                        <div class="img-responsive rounded">
+                            <img class="img-fluid" src="images/bg2.JPG" alt="bg">
+                        </div>
+                        <span>Bar - Paris</span>
+                        <h5>Les 7 mousquetaires</h5>
+                        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
+                            <span>Prix moyen: 25€</span>
+                            <strong class="text-danger">-30%</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- /Liste des annonces -->
+            <!-- Jager professionnel -->
+            <div class="container-fluid mt-3 pr-2 pl-2">
+                <div class="d-flex flex-column flex-md-row border-top border-bottom pb-4 pt-4">
+                    <div class="col-md-4 col-xl-3 offset-xl-2 p-0 d-flex align-items-center">
+                        <div class="img-responsive">
+                            <img class="img-fluid" src="images/professional.jpg" alt="bg">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-xl-5 pt-3 pt-md-0 p-0 pl-md-4 d-flex flex-column justify-content-lg-between">
+                        <h4 class="text-justify">Découvrez comment Jager permet de valoriser votre entreprise</h4>
+                        <span>Des promotions dans votre intérêt et dans celui du client !</span>
+                        <div>
+                            <a href="#" class="mt-3 pl-4 pr-4 btn btn-dark">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Jager professionnel -->
+
         </div>
 
-        <!--/.Social buttons-->
+        <!--Footer-->
+        <footer class="col-12">
+            <!--Footer Links-->
+            <div class="container-fluid mb-4">
+                <div class="row mt-4 mb-5">
+                    <!--First column-->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="container-fluid d-flex justify-content-center justify-content-md-start pb-2 p-0 mb-4 border border-top-0 border-right-0 border-left-0">
+                            <h4>Jäger</h4>
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-md-start">
+                            <p>Best Happy Hours near you.</p>
+                        </div>
 
-        <!-- Copyright-->
-        <div class="footer-copyright py-3 text-center">
-            © 2018 Copyright:
-            <a href="index.html">
-                <strong> jäger.com</strong>
-            </a>
-        </div>
-        <!--/.Copyright -->
-    </footer>
-    <!--/.Footer-->
+                    </div>
+                    <!--/.First column-->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+                    <!--Second column-->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="container-fluid d-flex justify-content-center justify-content-md-start pb-2 p-0 mb-4 border border-top-0 border-right-0 border-left-0">
+                            <h4>Jäger</h4>
+                        </div>
+                        <div class="container-fluid d-flex flex-column align-items-center align-items-md-start">
+                            <a href="#">Me géolocaliser</a>
+                            <a href="#">Accueil</a>
+                            <a href="#">Qui sommes-nous?</a>
+                        </div>
+                    </div>
+                    <!--/.Second column-->
+
+                    <!--Third column-->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="container-fluid d-flex justify-content-center justify-content-md-start pb-2 p-0 mb-4 border border-top-0 border-right-0 border-left-0">
+                            <h4>Jäger</h4>
+                        </div>
+                        <div class="container-fluid d-flex flex-column align-items-center align-items-md-start">
+                            <a href="#">Mon compte</a>
+                            <a href="inscription.html">Inscription</a>
+                            <a href="#">Aide</a>
+                        </div>
+                    </div>
+                    <!--/.Third column-->
+
+                    <!--Fourth column-->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="container-fluid d-flex justify-content-center justify-content-md-start  pb-2 p-0 mb-4 border border-top-0 border-right-0 border-left-0">
+                            <h4>Contact</h4>
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-md-start">
+                            <span>contact@jäger.com</span>
+                        </div>
+                    </div>
+                    <!--/.Fourth column-->
+
+                </div>
+            </div>
+            <!--/.Footer Links-->
+
+            <!--Social buttons-->
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <a class="btn-floating btn-sm btn-fb mx-1">
+                    <i class="fa fa-facebook"> </i>
+                </a>
+                <a class="btn-floating btn-sm btn-tw mx-1">
+                    <i class="fa fa-twitter"> </i>
+                </a>
+                <a class="btn-floating btn-sm btn-gplus mx-1">
+                    <i class="fa fa-google"> </i>
+                </a>
+                <a class="btn-floating btn-sm btn-li mx-1">
+                    <i class="fa fa-linkedin"> </i>
+                </a>
+            </div>
+
+            <!--/.Social buttons-->
+
+            <!-- Copyright-->
+            <div class="footer-copyright py-3 text-center">
+                © 2018 Copyright:
+                <a href="index.html">
+                    <strong> jäger.com</strong>
+                </a>
+            </div>
+            <!--/.Copyright -->
+        </footer>
+        <!--/.Footer-->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
