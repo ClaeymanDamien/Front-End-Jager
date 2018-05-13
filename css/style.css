@@ -2,7 +2,8 @@
 .background-index{
     background-image: url("../images/ok.jpg");
     background-size: cover;
-    height: 420px;
+    background-position: center; 
+    height: 90vh;
 }
 
 .discover-bg{
@@ -52,8 +53,20 @@
     height: 50px;
 }
 
+.height-64{
+    height: 64px;
+}
+
 .height-70{
     height: 70px;
+}
+
+.height-80{
+    height: 80px;
+}
+
+.height-100{
+    height: 100px;
 }
 
 .height-150{
@@ -314,3 +327,51 @@
     height: 0;
     padding-bottom: 56.25%;
 }
+
+.img-square{
+    position: relative;
+}
+.img-square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+  .img-square-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+/** Text pop hover **/
+
+.text-pop {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .container-pop{
+      position: relative;
+  }
+
+  .container-pop:hover .overlay {
+    opacity: 1;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
