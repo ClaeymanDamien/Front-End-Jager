@@ -1,6 +1,18 @@
+body{
+    overflow-x: hidden;
+}
 /** Back ground **/
+.bg-black{
+    background-color: black;
+}
+
+.bg-trait{
+    background-image: url("../images/trait.png");
+    background-size: cover;
+    align-items: center;
+}
 .background-index{
-    background-image: url("../images/ok.jpg");
+    background-image: url("../images/bg5.jpg");
     background-size: cover;
     background-position: center; 
     height: 90vh;
@@ -10,6 +22,35 @@
     background-image: url("../images/discover-bg.jpg");
     background-size: cover;
     background-position: center;
+}
+
+.discover-bg-particulier{
+    background-image: url("../images/discover-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+}
+
+.discover-bg-pro{
+    background-image: url("../images/discover-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+}
+
+.discover-bg-concept{
+    background-image: url("../images/discover-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+}
+
+
+.discover-bg-fonctionnement{
+    background-image: url("../images/discover-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
 }
 
 .white-bg{
@@ -55,6 +96,9 @@
 
 .height-64{
     height: 64px;
+}
+.min-height-64{
+    min-height: 64px;
 }
 
 .height-70{
@@ -343,35 +387,3 @@
     height: 100%;
   }
 
-/** Text pop hover **/
-
-.text-pop {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .container-pop{
-      position: relative;
-  }
-
-  .container-pop:hover .overlay {
-    opacity: 1;
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-  }
